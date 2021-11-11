@@ -14,7 +14,6 @@ body{
     background-size: contain;
     min-height: 100vh;
     display: flex;
-    font-size: 16px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,8 +21,8 @@ body{
     
 }
 .order-summary {
-    height: 85vh;
-    width: 25%;
+
+    width: 400px;
     background-color: white;
     border-radius: 24px;
     text-align: center;
@@ -59,7 +58,7 @@ body{
 }
 .selected-plan__icon {
     border-radius: 50%;
-    padding: 15px;
+    padding: 1rem;
 }
 .selected-plan__information {
     display: flex;
@@ -79,12 +78,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 1rem;
+    font-weight: 700;
     color: hsl(245, 75%, 52%);
 }
 .selected-plan__change-link:hover {
     text-decoration: none;
-    color: hsl(245, 75%, 52%)
+    filter: opacity(75%);
 }
 .order-summary__button {
     display: block;
@@ -95,14 +95,53 @@ body{
     padding: 10px 0;
     color: white;
     margin-bottom: 1rem;
-    box-shadow: 3px 3px 3px rgba(0,0,0, 0.26);
+    box-shadow: 0 8px 12px hsla(245, 75%, 52%, 0.26);
 }
 .order-summary__button:hover {
-    background-color: hsl(224, 23%, 55%);
+    filter: opacity(75%);
     cursor: pointer;
 }
 .order-summary__button--cancel {
     background-color: white;
-    color: hsl(225, 100%, 94%);
+    color: hsl(0, 0%, 67%);
     border-style: none;
+    margin-bottom: 2rem;
+    box-shadow: none;
+}
+.order-summary__button--cancel:hover {
+    filter: opacity(100%);
+    color: black;
+}
+
+@media only screen and (max-width: 400px) {
+    * {
+        font-size: 12px;
+    }
+    body{
+        background-image: url("images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(225, 100%, 94%);
+        
+    }
+    .order-summary {
+    
+        width: 325px;
+        background-color: white;
+        border-radius: 24px;
+        text-align: center;
+        margin: 1rem;
+    }
+    .selected-plan__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 1rem;
+    }
 }
