@@ -7,5 +7,5 @@ Technologie wykorzystane:
 - HTML5,
 - CSS3.
 
-## Live-strona ##
+### Live-strona ###
 Link do live-strony: https://wieczkowskip.github.io/order-summary-component/
